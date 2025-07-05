@@ -360,7 +360,6 @@ export default function Skills() {
     if (isAnimating) return; // prevent clicks mid-animation
     console.log("Toggling skill after animate check:", name);
 
-    const isSwitching = name !== expandedSkill && expandedSkill !== null;
     const isOpening = name !== expandedSkill && expandedSkill === null;
 
     if (name === expandedSkill) {

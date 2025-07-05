@@ -21,9 +21,11 @@ export async function fetchPortfolioRepos() {
         return [];
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const repos = await res.json() as any[];
 
     // Filter repos that have the `portfolio` topic
+    
     const portfolioRepos = repos.filter((repo: any) =>
         repo.topics.includes(PORTFOLIO_TAG)
     );

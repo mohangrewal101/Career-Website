@@ -23,6 +23,8 @@ export default function ProjectExpander({ project, onClose }: Props) {
   const [imageUrlsLoaded, setImageUrlsLoaded] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
+  console.log("Direction:", direction); // Reset direction to "right" when the component mounts
+
   useEffect(() => {
     const tryImages = async () => {
       const folder = project.imageFolder;
@@ -152,7 +154,7 @@ export default function ProjectExpander({ project, onClose }: Props) {
                     className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/80 text-gray-800 px-2 py-1 rounded hover:bg-white z-10"
                     onClick={() => {
                       setIsImageLoaded(false)
-                      setDirection("left");
+                      setDirection("left") ;
                       setCurrentImageIndex((prev) =>
                         prev === 0 ? validImages.length - 1 : prev - 1
                       );

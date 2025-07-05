@@ -13,7 +13,7 @@ export default async function handler(
         // For each tagged repo, fetch its portfolio.json metadata
         const metadataPromises = repos.map(async (repo) => {
             const metadata = await fetchPortfolioMetadata(repo.name);
-            if (metadata) {
+            if (metadata && typeof metadata === "object") {
                 return {
                     ...metadata,
                     github: repo.html_url,
