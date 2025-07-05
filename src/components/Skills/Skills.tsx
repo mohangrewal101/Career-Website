@@ -7,30 +7,6 @@
 
 import { skillIcons } from "./SkillIcons";
 import { useEffect, useState, useRef } from "react";
-import { FaJava, FaPython, FaReact, FaGithub, FaGitlab, FaSwift, FaUnity, FaLinux } from "react-icons/fa";
-import { FaComputer } from "react-icons/fa6";
-import { PiFileCSharp } from "react-icons/pi";
-import {
-  SiTypescript,
-  SiJavascript,
-  SiKotlin,
-  SiC,
-  SiCplusplus,
-  SiFastapi,
-  SiTailwindcss,
-  SiHuggingface,
-  SiAndroidstudio,
-  SiXcode,
-  SiIntellijidea,
-  SiUnrealengine,
-  SiConfluence,
-  SiJira,
-  SiRender,
-  SiVercel,
-  SiFramework,
-  SiAirtable
-} from "react-icons/si";
-import { TbApi } from "react-icons/tb";
 import Link from "next/link";
 
 const ANCHORS = {
