@@ -1,0 +1,18 @@
+{
+  "name": "Career Website",
+  "description": "My interactive developer portfolio website.",
+  "detailedDescription": "Showcases my projects, skills, and experiences using Next.js and Tailwind CSS.",
+  "startDate": "2025-06-01",
+  "endDate": "2025-07-01",
+  "type": "personal",
+  "technologies": ["Typescript", "React", "Tailwind CSS", "GitHub", "Vercel"], 
+  "features": [
+    "Dynamic project automated loading from GitHub",
+    "Interactive project modals and skill links",
+    "Animated and responsive design"
+  ],
+  "github": "https://github.com/mohangrewal101/CareerWebsite",
+  "demo": "",
+  "imageFolder": "/Career_Website"
+}
+
