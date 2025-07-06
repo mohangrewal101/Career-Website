@@ -5,7 +5,7 @@
   "startDate": "2025-06-01",
   "endDate": "2025-07-01",
   "type": "personal",
-  "technologies": ["Typescript", "React", "Tailwind CSS", "GitHub", "Vercel"], 
+  "technologies": ["TypeScript", "React", "Tailwind CSS", "GitHub", "Vercel"], 
   "features": [
     "Dynamic project automated loading from GitHub",
     "Interactive project modals and skill links",

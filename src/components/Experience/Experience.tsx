@@ -25,7 +25,7 @@ export default function Experience() {
                 className="rounded-xl shadow-md object-cover w-full h-auto"
               />
               <Image
-                src="/internshipPhotos/rivian_photo_1.jpg"
+                src="/internshipPhotos/rivian-photo-1.jpg"
                 alt="Rivian Interns Photo 1"
                 width={600}
                 height={400}
@@ -35,7 +35,7 @@ export default function Experience() {
             <div className="mt-4 flex justify-center">
               <div className="w-1/2">
                 <Image
-                  src="/internshipPhotos/rivian_photo_2.jpg"
+                  src="/internshipPhotos/rivian-photo-2.jpg"
                   alt="Rivian Interns Photo 2"
                   width={600}
                   height={400}
