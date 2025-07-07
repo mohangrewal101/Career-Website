@@ -192,6 +192,7 @@ export default function Projects() {
             imageFolder: repo.imageFolder || "",
             features: repo.features || [],
             developmentDetails: repo.developmentDetails || "",
+            oneLiner: repo.oneLiner || "Click me!",
           });
         });
 

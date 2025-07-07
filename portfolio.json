@@ -14,6 +14,7 @@
   "github": "https://github.com/mohangrewal101/CareerWebsite",
   "demo": "",
   "imageFolder": "/Career_Website",
+  "developmentDetails": "Developed using Next.js for server-side rendering and Tailwind CSS for styling. Implemented REST APIs to fetch project data from GitHub, ensuring the portfolio is always up-to-date. Utilized Framer Motion for animations and transitions, enhancing user experience. Deployed on Vercel for optimal performance and continuous integration.",
   "oneLiner": "Want to know the best of me? Check out my portfolio website! 💻"
 }
 
