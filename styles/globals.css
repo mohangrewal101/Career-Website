@@ -1,3 +1,51 @@
 @import "tailwindcss/preflight";
 
 @tailwind utilities;
+
+.card-peel {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-peel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: #f3f4f6; /* match card bg */
+  border-bottom-left-radius: 8px;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translate(50%, -50%) rotate(0deg);
+  transform-origin: top right;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.card-peel:hover::before {
+  transform: translate(0%, 0%) rotate(-30deg);
+  box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-oneliner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  background-color: #f3f4f6; /* match card bg */
+  color: #4b5563; /* gray-700 */
+  font-size: 0.75rem;
+  text-align: center;
+  border-bottom-left-radius: 8px;
+  padding: 0.25rem 0.5rem;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+
+.card-peel:hover .card-oneliner {
+  opacity: 1;
+  transform: translateY(0);
+}

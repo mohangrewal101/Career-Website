@@ -17,6 +17,7 @@ export default class Project implements projectType {
   features?: string[];
   developmentDetails?: string;
   awards?: string[];
+  oneLiner?: string | undefined;
 
   constructor(data: projectType) {
     this.name = data.name;
@@ -33,6 +34,7 @@ export default class Project implements projectType {
     this.features = data.features;
     this.developmentDetails = data.developmentDetails;
     this.awards = data.awards;
+    this.oneLiner = data.oneLiner;
   }
 
   get isPresent(): boolean {

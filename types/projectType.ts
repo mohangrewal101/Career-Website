@@ -15,4 +15,5 @@ export interface projectType {
   features?: string[];
   developmentDetails?: string;
   awards?: string[];
+  oneLiner?: string; 
 }

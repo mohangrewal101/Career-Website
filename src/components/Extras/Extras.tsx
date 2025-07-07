@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGamepad, FaHandsHelping, FaBookOpen, FaGuitar, FaBiking, FaSnowboarding, FaDumbbell, FaRobot } from "react-icons/fa";
+import { FaGamepad, FaHandsHelping, FaHockeyPuck, FaBookOpen, FaGuitar, FaBiking, FaSnowboarding, FaDumbbell, FaRobot } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const leftVariants = {
@@ -36,7 +36,7 @@ export default function Extras() {
                                     text: "Assisted in community outreach and public events for either environmental awareness or to help get donations for cancer research, helping coordinate activities and support services for diverse audiences.",
                                 },
                                 {
-                                    icon: <FaHandsHelping className="text-purple-600 text-2xl mt-1" />,
+                                    icon: <FaHockeyPuck className="text-purple-600 text-2xl mt-1" />,
                                     title: "Canucks Autism Network Volunteer",
                                     text: "Supported children and youth with autism in recreational sport programs and camps, fostering inclusivity and teamwork.",
                                 },

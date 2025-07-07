@@ -1,11 +1,11 @@
 {
   "name": "Career Website",
   "description": "My interactive developer portfolio website.",
-  "detailedDescription": "Showcases my projects, skills, and experiences using Next.js and Tailwind CSS.",
-  "startDate": "2025-06-01",
-  "endDate": "2025-07-01",
+  "detailedDescription": "Designed and developed a professional portfolio website to showcase my projects, skills, and experiences in a clean, interactive format. Built with Next.js for server-side rendering and Tailwind CSS for modern, responsive styling, the site features dynamically loaded projects directly from GitHub using REST APIs, ensuring it always stays up to date. Integrated animated skill dropdowns, interactive project modals, and cross-linked technologies for a seamless user experience. Employed Framer Motion to create smooth animations and transitions between sections, enhancing visual appeal and usability. Deployed the site on Vercel for fast global delivery and continuous integration for the auto-loading features from GitHub. This project demonstrates advanced frontend engineering, clean component architecture, and a focus on recruiter-friendly design.",
+  "startDate": "June 2025",
+  "endDate": "July 2025",
   "type": "personal",
-  "technologies": ["TypeScript", "React", "Tailwind CSS", "GitHub", "Vercel"], 
+  "technologies": ["TypeScript", "React", "Tailwind CSS", "GitHub", "Vercel", "Next.js", "REST APIs", "Framer Motion", "UI Design"], 
   "features": [
     "Dynamic project automated loading from GitHub",
     "Interactive project modals and skill links",
@@ -13,6 +13,7 @@
   ],
   "github": "https://github.com/mohangrewal101/CareerWebsite",
   "demo": "",
-  "imageFolder": "/Career_Website"
+  "imageFolder": "/Career_Website",
+  "oneLiner": "Want to know the best of me? Check out my portfolio website! 💻"
 }
 

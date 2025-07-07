@@ -48,4 +48,7 @@ export const skillIcons: { [key: string]: JSX.Element } = {
   "Multiplayer Integration": <img src="/icons/multiplayerintegration.svg" alt="Multiplayer Integration" width={24} height={24} />,
   "Game AI": <img src="/icons/gameai.svg" alt="Game AI" width={24} height={24} />,
   "Agile Development": <img src="/icons/agiledevelopment.svg" alt="Agile Development" width={24} height={24} />,
+  "Next.js": <img src="/icons/nextjs.svg" alt="Next.js" width={24} height={24} />,
+  "Framer Motion": <img src="/icons/framermotion.svg" alt="Framer Motion" width={24} height={24} />,
+  "UI Design": <img src="/icons/uidesign.svg" alt="UI Design" width={24} height={24} />
 };

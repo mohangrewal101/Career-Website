@@ -23,7 +23,7 @@ const ANCHORS = {
 
 const PROJECT_SKILLS = {
   AIWorkoutPlanner: [
-    "React", "JavaScript", "Python", "Hugging Face", "FastAPI", "Tailwind CSS", "Vercel", "Render", "GPT-2", "GitHub", "Transformer Models", "Prompt Engineering", "Local Model Hosting"
+    "React", "JavaScript", "Python", "Hugging Face", "FastAPI", "Tailwind CSS", "Vercel", "Render", "GPT-2", "GitHub", "Next.js", "UI Design", "Transformer Models", "Prompt Engineering", "Local Model Hosting"
   ],
   GuitarGuideApp: [
     "Java", "C", "C++", "Kotlin", "Python", "Android Studio", "Aubio", "GitHub", "Transformer Models", "NLP", "Signal Processing", "Local Model Hosting"
@@ -145,6 +145,16 @@ const skills = [
       {
         name: "Tailwind CSS", icon: skillIcons["Tailwind CSS"], linksTo: [
           ...getAnchorsForSkill("Tailwind CSS")
+        ]
+      },
+      {
+        name: "Next.js", icon: skillIcons["Next.js"], linksTo: [
+          ...getAnchorsForSkill("Next.js")
+        ]
+      },
+      {
+        name: "Framer Motion", icon: skillIcons["Framer Motion"], linksTo: [
+          ...getAnchorsForSkill("Framer Motion")
         ]
       },
       {
@@ -342,6 +352,11 @@ const skills = [
           ...getAnchorsForSkill("Agile Development")
         ]
       },
+      {
+        name: "UI Design", icon: skillIcons["UI Design"], linksTo: [
+          ...getAnchorsForSkill("UI Design")
+        ]
+      }
     ],
   },
 ];
@@ -438,26 +453,40 @@ export default function Skills() {
   }, [expandedSkill, isAnimating]);
 
   return (
-    <section className="bg-white py-12 px-6 text-gray-900" id="skills">
+    <section className="bg-white py-12 px-6 text-gray-900 font-sans" id="skills">
       <div id="__SKILL_TOGGLE__" className="hidden" />
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center">Skills</h2>
+        <h2 className="text-3xl font-bold mb-4 text-center">Skills</h2>
+         <p className="text-lg text-gray-600 mb-8 text-center">
+          Click a skill to see in which projects and experiences it is used in!
+        </p>
         {skills.map((section) => (
           <div key={section.category} className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">{section.category}</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div className="flex flex-wrap gap-4 justify-start">
               {section.items.map((skill) => (
-                <div key={skill.name} id={`skill-${skill.name.replace(/\s/g, '')}`}>
+                <div
+                  key={skill.name}
+                  id={`skill-${skill.name.replace(/\s/g, '')}`}
+                  className="relative group cursor-pointer"
+                  onClick={() => toggleSkill(skill.name)}
+                >
+                  {/* Icon */}
                   <div
-                    className="flex items-center space-x-2 hover:underline cursor-pointer"
-                    onClick={() => toggleSkill(skill.name)}
+                    className={`p-2 rounded-full transition-transform duration-300
+                      ${skill.name === expandedSkill
+                        ? "scale-110 bg-gray-200 shadow-md"
+                        : "hover:scale-110 hover:shadow-lg"
+                      }`}
                   >
-                    <span className="text-xl">{skill.icon}</span>
-                    <span
-                      className={`text-blue-600 ${skill.name === expandedSkill ? "font-bold" : ""}`}
-                    >
-                      {skill.name}
-                    </span>
+                    <span className="text-3xl">{skill.icon}</span>
+                  </div>
+
+                  {/* Tooltip on hover */}
+                  <div
+                    className="absolute left-1/2 -translate-x-1/2 mt-2 text-sm bg-gray-700 text-white rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20"
+                  >
+                    {skill.name}
                   </div>
                 </div>
               ))}
@@ -465,55 +494,62 @@ export default function Skills() {
           </div>
         ))}
 
+        {/* Dropdown */}
         <div
           ref={dropdownRef}
           className={`transition-all duration-500 ease-in-out overflow-hidden
-            ${expandedSkill
-              ? "max-h-[1000px] opacity-100 translate-y-0 mt-10"
+    ${expandedSkill
+              ? "max-h-[1000px] opacity-100 translate-y-0 mt-6"
               : "max-h-0 opacity-0 -translate-y-4 mt-0"
             }
-          `}
+  `}
         >
           {activeSkillData && (
-            <div className="p-6 bg-gray-100 rounded-lg shadow">
-              <h3 className="text-2xl font-bold mb-6 text-center">More on {activeSkillData.name}</h3>
-              <div className="flex flex-col md:flex-row md:justify-center md:space-x-16">
-                <div>
-                  <h4 className="text-xl font-semibold mb-2 text-center md:text-left">
-                    Experiences with {activeSkillData.name}
-                  </h4>
-                  <ul className="list-disc list-inside">
+            <div className="p-6 rounded-xl bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 shadow-2xl border border-gray-300 hover:shadow-3xl transition-shadow duration-300 font-sans backdrop-blur-lg">
+              <div className="flex items-center mb-4">
+                <span className="text-4xl mr-3">{activeSkillData.icon}</span>
+                <h3 className="text-2xl font-extrabold">{activeSkillData.name}</h3>
+              </div>
+              <div className="flex flex-col md:flex-row md:space-x-12">
+                {/* Experiences */}
+                <div className="mb-4 md:mb-0">
+                  <h4 className="text-lg font-semibold mb-2 text-left">Experiences with {activeSkillData.name}</h4>
+                  <ul className="list-disc list-inside space-y-1">
                     {activeSkillData.linksTo
                       .filter((item) => item.type === "experience")
                       .map((item) => (
                         <li key={item.href}>
-                          <Link href={item.href} onClick={() => { setExpandedSkill(null); }}
-                            className="text-blue-500 hover:underline">
+                          <Link
+                            href={item.href}
+                            onClick={() => setExpandedSkill(null)}
+                            className="relative inline-block font-semibold text-blue-800 transition-all duration-300 ease-out hover:scale-105 hover:shadow-md hover:bg-gradient-to-r hover:from-indigo-100 hover:to-purple-100 rounded px-1"
+                          >
                             {item.label}
                           </Link>
                         </li>
                       ))}
                   </ul>
                 </div>
+                {/* Projects */}
                 <div>
-                  <h4 className="text-xl font-semibold mb-2 text-center md:text-left">
-                    Projects with {activeSkillData.name}
-                  </h4>
-                  <ul className="list-disc list-inside">
+                  <h4 className="text-lg font-semibold mb-2 text-left">Projects with {activeSkillData.name}</h4>
+                  <ul className="list-disc list-inside space-y-1">
                     {activeSkillData.linksTo
                       .filter((item) => item.type === "project")
                       .map((item) => (
                         <li key={item.href}>
-                          <Link href={item.href}
+                          <Link
+                            href={item.href}
                             onClick={(e) => {
-                              e.preventDefault(); // prevent default anchor jump
+                              e.preventDefault();
                               const eventTarget = document.getElementById("__PROJECT_EXPANDER__");
                               eventTarget?.dispatchEvent(
                                 new CustomEvent("expand-project", { detail: item.label })
                               );
                               setExpandedSkill(null);
                             }}
-                            className="text-blue-500 hover:underline">
+                            className="relative inline-block font-semibold text-blue-800 transition-all duration-300 ease-out hover:scale-105 hover:shadow-md hover:bg-gradient-to-r hover:from-indigo-100 hover:to-purple-100 rounded px-1"
+                          >
                             {item.label}
                           </Link>
                         </li>
@@ -528,4 +564,3 @@ export default function Skills() {
     </section>
   );
 }
-

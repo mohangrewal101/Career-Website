@@ -151,22 +151,22 @@ export default function ProjectExpander({ project, onClose }: Props) {
               {validImages.length > 1 && (
                 <>
                   <button
-                    className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/80 text-gray-800 px-2 py-1 rounded hover:bg-white z-10"
+                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-gray-800 rounded-full shadow-lg w-10 h-10 flex items-center justify-center hover:scale-110 hover:bg-gray-100 transition-all duration-200 z-10 opacity-80 hover:opacity-100"
                     onClick={() => {
-                      setIsImageLoaded(false)
-                      setDirection("left") ;
+                      setIsImageLoaded(false);
+                      setDirection("left");
                       setCurrentImageIndex((prev) =>
                         prev === 0 ? validImages.length - 1 : prev - 1
                       );
                     }}
                     aria-label="Previous Image"
                   >
-                    ‹
+                    <span className="text-2xl font-bold">‹</span>
                   </button>
                   <button
-                    className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/80 text-gray-800 px-2 py-1 rounded hover:bg-white z-10"
+                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-gray-800 rounded-full shadow-lg w-10 h-10 flex items-center justify-center hover:scale-110 hover:bg-gray-100 transition-all duration-200 z-10 opacity-80 hover:opacity-100"
                     onClick={() => {
-                      setIsImageLoaded(false)
+                      setIsImageLoaded(false);
                       setDirection("right");
                       setCurrentImageIndex((prev) =>
                         prev === validImages.length - 1 ? 0 : prev + 1
@@ -174,7 +174,7 @@ export default function ProjectExpander({ project, onClose }: Props) {
                     }}
                     aria-label="Next Image"
                   >
-                    ›
+                    <span className="text-2xl font-bold">›</span>
                   </button>
                 </>
               )}

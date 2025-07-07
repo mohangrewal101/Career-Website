@@ -29,7 +29,8 @@ const hardcodedProjects = [
       "AI-powered rotating exercise tips",
       "Utilized AI algrorithms for exercise recommendations",
     ],
-    developmentDetails: "Used FastAPI for backend logic and React with Tailwind for UI. Implemented kNN and logistic regression models for generating content. Deployed using Render and Vercel."
+    developmentDetails: "Used FastAPI for backend logic and React with Tailwind for UI. Implemented kNN and logistic regression models for generating content. Deployed using Render and Vercel.",
+    oneLiner: "Your AI fitness coach in a click 💪"
   }),
   new Project({
     name: "Guitar Guide App",
@@ -48,7 +49,8 @@ const hardcodedProjects = [
       "Chord detection from audio input",
       "Songs broken down into chords"
     ],
-    developmentDetails: "Implementing signal processing using Aubio, integrating it with Android Studio via JNI. Developing chord recognition in Kotlin and using Python for prototyping signal features."
+    developmentDetails: "Implementing signal processing using Aubio, integrating it with Android Studio via JNI. Developing chord recognition in Kotlin and using Python for prototyping signal features.",
+    oneLiner: "Play any song on guitar with this chord recognition app! 🎸"
   }),
   new Project({
     name: "Path-Reachability",
@@ -67,7 +69,8 @@ const hardcodedProjects = [
       "Path condition evaluation using Z3",
       "Syntax-aware highlighting of logic branches"
     ],
-    developmentDetails: "Wrote a parser in TypeScript, translated conditionals into Z3 expressions, and visualized reachable branches with a custom UI."
+    developmentDetails: "Wrote a parser in TypeScript, translated conditionals into Z3 expressions, and visualized reachable branches with a custom UI.",
+    oneLiner: "Visualize all execution paths in your TypeScript code! 🛤️"
   }),
   new Project({
     name: "Form-Builder DSL",
@@ -86,7 +89,8 @@ const hardcodedProjects = [
       "AST construction and evaluation",
       "Supports conditional logic in forms"
     ],
-    developmentDetails: "Designed grammar in ANTLR4, implemented semantic evaluation via Visitor pattern in TypeScript, and created a simple test suite."
+    developmentDetails: "Designed grammar in ANTLR4, implemented semantic evaluation via Visitor pattern in TypeScript, and created a simple test suite.",
+    oneLiner: "Short on time? Build forms and quizzes in minutes with a custom DSL! 📝"
   }),
   new Project({
     name: "Panic Titanic",
@@ -106,7 +110,8 @@ const hardcodedProjects = [
       "Team-based objectives and addicting gameplay loops"
     ],
     developmentDetails: "Developed in Unity with Photon RPC for multiplayer sync. Designed gameplay loop, player roles, and implemented minigame logic.",
-    awards: ["Audience Choice Award - UBC Game Dev 2021", "Best Audio Award - UBC Game Dev 2021"]
+    awards: ["Audience Choice Award - UBC Game Dev 2021", "Best Audio Award - UBC Game Dev 2021"],
+    oneLiner: "Among Us meets Titanic in this 3D multiplayer party game! 🚢"
   }),
   new Project({
     name: "AI Demo Test",
@@ -125,7 +130,8 @@ const hardcodedProjects = [
       "Behavior tree switching",
       "Integration of C++ with Blueprint logic"
     ],
-    developmentDetails: "Implemented state transitions using C++ inheritance. Used Unreal’s visual scripting engine, Blueprint, for rapid iteration of AI behavior logic."
+    developmentDetails: "Implemented state transitions using C++ inheritance. Used Unreal’s visual scripting engine, Blueprint, for rapid iteration of AI behavior logic.",
+    oneLiner: "Understand AI state management in Unreal Engine with this demo! 🤖"
   }),
   new Project({
     name: "Roguelike",
@@ -145,7 +151,8 @@ const hardcodedProjects = [
       "Modular character and enemy classes"
     ],
     developmentDetails: "Built using Unity's tilemap system and coroutines for asynchronous gameplay. Applied SOLID principles to keep entities decoupled and reusable.",
-    awards: ["Best Gameplay Award - UBC Game Dev 2020",]
+    awards: ["Best Gameplay Award - UBC Game Dev 2020",],
+    oneLiner: "Experience fast-paced roguelike combat with this Unity game! ⚔️"
   })
 ];
 
@@ -260,8 +267,11 @@ export default function Projects() {
     <section className="bg-white py-16 px-6 text-gray-900" id="projects">
       <div id="__PROJECT_EXPANDER__" style={{ display: "none" }} />
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
-        <div className="grid gap-8 md:grid-cols-2">
+        <h2 className="text-3xl font-bold mb-4 text-center">Projects</h2>
+        <p className="text-lg text-gray-600 mb-8 text-center">
+          Click a project to expand and learn more about it, or check out its Github repository!
+        </p>
+        <div className="grid gap-y-10 gap-x-8 md:grid-cols-2">
           {sortedProjects.map((project) => {
             const isExpanded = expandedProject === project.name;
             const isAcademic = project.type === "academic";
@@ -276,7 +286,32 @@ export default function Projects() {
                 id={`project-${project.name.replace(/\s/g, "")}`}
                 layoutId={`card-container-${project.name}`}
                 onClick={() => setModalProject(project)}
-                className={`border-2 ${borderColor} bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow`}
+                className={`relative border-2 ${borderColor} bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer`}
+                whileHover="hover"
+                initial="rest"
+                animate="rest"
+                variants={{
+                  rest: {
+                    y: 0,
+                    scale: 1,
+                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                    transition: {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    },
+                  },
+                  hover: {
+                    y: -8, // lift slightly upward
+                    scale: 1.03, // slightly enlarge
+                    boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.2)", // stronger shadow
+                    transition: {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    },
+                  },
+                }}
               >
                 <h3 className="text-xl font-semibold mb-1">{project.name}</h3>
                 <span className={`inline-block px-2 py-1 text-xs font-semibold rounded ${badgeColor} mb-1`}>
@@ -363,7 +398,19 @@ export default function Projects() {
                     )}
                   </div>
                 )}
+                {/* One-liner Drawer */}
+                <motion.div
+                  className="absolute bottom-[-2.5rem] left-0 right-0 px-4 py-2 bg-blue-50 border-t border-blue-200 text-blue-700 font-medium rounded-b shadow-inner"
+                  variants={{
+                    hover: { opacity: 1, y: 0 },
+                    rest: { opacity: 0, y: 10 },
+                  }}
+                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                >
+                  {project.oneLiner}
+                </motion.div>
               </motion.div>
+
             )
           })}
         </div>
