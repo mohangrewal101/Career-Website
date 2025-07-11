@@ -31,12 +31,12 @@ export default function Hero() {
                     <FaLinkedin className="mr-2" /> LinkedIn
                     </Button>
             </a>
-            <a href="/Mohan_Grewal_Resume.pdf" target="_blank">
+            <a href="/Hero/Mohan_Grewal_Resume.pdf" download>
                 <Button>
                     <Download className="mr-2" /> Resume
                 </Button>
             </a>
-            <a href="mailto:mohangrewal24@gmail.com">
+            <a href="mailto:mohangrewal24@gmail.com?subject=Inquiry%20from%20Portfolio&body=Hi%20Mohan%2C%0D%0A%0D%0AI%20saw%20your%20portfolio%20and...">
                 <Button variant="outline">
                     Email
                     </Button>
