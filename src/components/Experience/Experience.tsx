@@ -87,10 +87,10 @@ export default function Experience() {
         </div>
 
         {/* Internship 2 - East Side Games */}
-        <div id="East_Side_Games" className="flex flex-col-reverse lg:flex-row items-center gap-8">
+        <div id="EastSide_Games" className="flex flex-col-reverse lg:flex-row items-center gap-8">
           <div className="lg:w-1/2">
             <h3 className="text-2xl font-semibold mb-2">Software Engineer Intern</h3>
-            <p className="text-sm text-gray-600 mb-1">East Side Games · Sep 2020 – Apr 2021 · Vancouver, BC</p>
+            <p className="text-sm text-gray-600 mb-1">EastSide Games · Sep 2020 – Apr 2021 · Vancouver, BC</p>
             
             <div className="flex flex-wrap gap-2 my-3">
               {[
