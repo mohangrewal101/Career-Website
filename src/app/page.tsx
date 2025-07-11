@@ -169,6 +169,7 @@ export default function PortfolioPage() {
         if (!res.ok) throw new Error("Failed to fetch dynamic projects");
         const dynamicRepos = await res.json();
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const dynamicProjects = dynamicRepos.map((repo: any) =>
           new Project({
             name: repo.name.replace(/^"(.*)"$/, "$1"), // Remove outer quotes if present
