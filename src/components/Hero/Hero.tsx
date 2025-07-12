@@ -36,7 +36,7 @@ export default function Hero() {
                     <Download className="mr-2" /> Resume
                 </Button>
             </a>
-            <a href="mailto:mohangrewal24@gmail.com?subject=Inquiry%20from%20Portfolio&body=Hi%20Mohan%2C%0D%0A%0D%0AI%20saw%20your%20portfolio%20and...">
+            <a href="mailto:mohangrewal24@gmail.com">
                 <Button variant="outline">
                     Email
                     </Button>
