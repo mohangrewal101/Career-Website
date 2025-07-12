@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mohan Grewal – Portfolio",
   description: "Personal portfolio of Mohan Grewal showcasing projects, skills, and experience.",
+  icons: {
+    icon: "FaviconIcon/favicon.ico",
+    shortcut: "FaviconIcon/favicon.ico",
+    apple: "FaviconIcon/favicon.ico",
+  }
 };
 
 export default function RootLayout({
