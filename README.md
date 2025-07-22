@@ -4,22 +4,22 @@ A personal developer portfolio to showcase my projects, skills, and experience i
 ---
 
 # 🚀 Features
-✅ **Dynamic Project Loading**
+✅ **Dynamic Project Loading**:
 Fetches and displays the latest projects directly from my GitHub repositories using REST APIs, ensuring the site stays up to date.
 
-✅ **Interactive Modals**
+✅ **Interactive Modals**:
 Click any project to see a beautifully animated modal with expanded details, features, and tech stack.
 
-✅ **Cross-Linked Technologies**
+✅ **Cross-Linked Technologies**:
 Skill icons and technologies link directly to associated projects for seamless navigation.
 
-✅ **Responsive Design**
+✅ **Responsive Design**:
 Optimized for desktops using Tailwind CSS.
 
-✅ **Smooth Animations**
+✅ **Smooth Animations**:
 Powered by Framer Motion for elegant transitions and interactions.
 
-✅ **Automatic Deployment**
+✅ **Automatic Deployment**:
 Deployed on Vercel with CI/CD for instant updates when I push changes to GitHub.
 
 ---
