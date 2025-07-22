@@ -1,6 +1,7 @@
 # 🌐 Career Website
 A personal developer portfolio to showcase my projects, skills, and experience in a clean, interactive format. This site is designed with recruiters in mind, featuring smooth animations, dynamic project loading, and cross-linked technologies for an engaging user experience.
 
+---
 
 # 🚀 Features
 ✅ Dynamic Project Loading
@@ -21,6 +22,8 @@ Powered by Framer Motion for elegant transitions and interactions.
 ✅ Automatic Deployment
 Deployed on Vercel with CI/CD for instant updates when I push changes to GitHub.
 
+---
+
 # 🛠️ Tech Stack
 Frontend: Next.js, TypeScript, Tailwind CSS
 
@@ -31,6 +34,8 @@ APIs: GitHub REST API
 Hosting: Vercel
 
 Version Control: Git + GitHub
+
+---
 
 # 📂 Project Structure
 bash
@@ -47,6 +52,8 @@ Career-Website/
 📄 Download Resume
 📧 mohangrewal24@gmail.com
 
+---
+
 # 🌟 Highlights
 ✨ Designed for recruiters and hiring managers.
 
@@ -54,9 +61,12 @@ Career-Website/
 
 🗂 Organized project timeline and skills.
 
+---
+
 # 🖥 Live Demo
 👉 Visit Portfolio on Vercel
 
+---
 
 #💡 Future Improvements
 Support for mobile mode.
