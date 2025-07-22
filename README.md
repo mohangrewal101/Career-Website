@@ -4,40 +4,41 @@ A personal developer portfolio to showcase my projects, skills, and experience i
 ---
 
 # 🚀 Features
-✅ Dynamic Project Loading
+✅ **Dynamic Project Loading**
 Fetches and displays the latest projects directly from my GitHub repositories using REST APIs, ensuring the site stays up to date.
 
-✅ Interactive Modals
+✅ **Interactive Modals**
 Click any project to see a beautifully animated modal with expanded details, features, and tech stack.
 
-✅ Cross-Linked Technologies
+✅ **Cross-Linked Technologies**
 Skill icons and technologies link directly to associated projects for seamless navigation.
 
-✅ Responsive Design
+✅ **Responsive Design**
 Optimized for desktops using Tailwind CSS.
 
-✅ Smooth Animations
+✅ **Smooth Animations**
 Powered by Framer Motion for elegant transitions and interactions.
 
-✅ Automatic Deployment
+✅ **Automatic Deployment**
 Deployed on Vercel with CI/CD for instant updates when I push changes to GitHub.
 
 ---
 
 # 🛠️ Tech Stack
-Frontend: Next.js, TypeScript, Tailwind CSS
+**Frontend**: Next.js, TypeScript, Tailwind CSS
 
-Animations: Framer Motion
+**Animations**: Framer Motion
 
-APIs: GitHub REST API
+**APIs**: GitHub REST API
 
-Hosting: Vercel
+**Hosting**: Vercel
 
-Version Control: Git + GitHub
+**Version Control**: Git + GitHub
 
 ---
 
 # 📂 Project Structure
+```
 bash
 Copy
 Edit
@@ -51,7 +52,7 @@ Career-Website/
 📄 Resume & Contact
 📄 Download Resume
 📧 mohangrewal24@gmail.com
-
+```
 ---
 
 # 🌟 Highlights
