@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌐 Career Website
+A personal developer portfolio to showcase my projects, skills, and experience in a clean, interactive format. This site is designed with recruiters in mind, featuring smooth animations, dynamic project loading, and cross-linked technologies for an engaging user experience.
 
-## Getting Started
 
-First, run the development server:
+🚀 Features
+✅ Dynamic Project Loading
+Fetches and displays the latest projects directly from my GitHub repositories using REST APIs, ensuring the site stays up to date.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+✅ Interactive Modals
+Click any project to see a beautifully animated modal with expanded details, features, and tech stack.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✅ Cross-Linked Technologies
+Skill icons and technologies link directly to associated projects for seamless navigation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+✅ Responsive Design
+Optimized for desktops using Tailwind CSS.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✅ Smooth Animations
+Powered by Framer Motion for elegant transitions and interactions.
 
-## Learn More
+✅ Automatic Deployment
+Deployed on Vercel with CI/CD for instant updates when I push changes to GitHub.
 
-To learn more about Next.js, take a look at the following resources:
+🛠️ Tech Stack
+Frontend: Next.js, TypeScript, Tailwind CSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Animations: Framer Motion
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+APIs: GitHub REST API
 
-## Deploy on Vercel
+Hosting: Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Version Control: Git + GitHub
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📂 Project Structure
+bash
+Copy
+Edit
+Career-Website/
+├── components/        # Reusable React components
+├── public/            # Static assets (images, favicon, resume)
+├── styles/            # Global styles (Tailwind)
+├── pages/             # Next.js pages
+├── api/               # Serverless API routes
+└── ...
+📄 Resume & Contact
+📄 Download Resume
+📧 mohangrewal24@gmail.com
+
+🌟 Highlights
+✨ Designed for recruiters and hiring managers.
+
+🖤 Custom favicon and branding.
+
+🗂 Organized project timeline and skills.
+
+🖥 Live Demo
+👉 Visit Portfolio on Vercel
+
+
+💡 Future Improvements
+Support for mobile mode.
+
+Support for dark mode.
+
+Change UI to a certain catchy theme!
