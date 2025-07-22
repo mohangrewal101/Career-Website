@@ -64,8 +64,9 @@ Career-Website/
 
 ---
 
-# 🖥 Live Demo
-👉 Visit Portfolio on Vercel
+🔗 Live Demo
+
+👉 https://mohangrewalcareer.vercel.app/
 
 ---
 
@@ -75,3 +76,11 @@ Support for mobile mode.
 Support for dark mode.
 
 Change UI to a certain catchy theme!
+
+---
+
+📬 Contact
+
+Made by Mohan Grewal
+
+Contact me on LinkedIn: https://www.linkedin.com/in/mohan-grewal-18605a211/
