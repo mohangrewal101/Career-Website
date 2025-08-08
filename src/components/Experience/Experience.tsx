@@ -1,7 +1,3 @@
-// Experience.tsx
-// This is a client component for the Experience section of the portfolio page
-// It includes details about internships and work experience with images.
-
 'use client';
 
 import Image from "next/image";
@@ -14,8 +10,9 @@ export default function Experience() {
         <h2 className="text-3xl font-bold mb-10 text-center">Experience</h2>
 
         {/* Internship 1 - Rivian */}
-        <div id="Rivian" className="flex flex-col lg:flex-row items-center gap-8 mb-12">
-          <div className="lg:w-1/2">
+        <div id="Rivian" className="flex flex-col-reverse lg:flex-row items-start gap-8 mb-16">
+          {/* Images First on Desktop, Second on Mobile */}
+          <div className="w-full lg:w-1/2">
             <div className="grid grid-cols-2 gap-4">
               <Image
                 src="/internshipPhotos/rivian-logo.jpg"
@@ -41,17 +38,18 @@ export default function Experience() {
                   height={400}
                   className="rounded-xl shadow-md object-cover w-full h-auto"
                 />
-
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2">
+
+          {/* Text */}
+          <div className="w-full lg:w-1/2">
             <h3 className="text-2xl font-semibold mb-2">Software Engineer Intern</h3>
             <p className="text-sm text-gray-600 mb-1">Rivian · Jan 2023 – Aug 2023 · Vancouver, BC</p>
 
             <div className="flex flex-wrap gap-2 my-3">
               {[
-                "Kotlin", "Swift", "Python", "GitLab", "Android Studio", "Xcode", "REST APIs", "Build Pipelines", 
+                "Kotlin", "Swift", "Python", "GitLab", "Android Studio", "Xcode", "REST APIs", "Build Pipelines",
                 "Linux", "JIRA", "Confluence", "Operating Systems", "Agile Development", "Environment Variables"
               ].map((tech) => (
                 <span
@@ -87,11 +85,30 @@ export default function Experience() {
         </div>
 
         {/* Internship 2 - East Side Games */}
-        <div id="EastSide_Games" className="flex flex-col-reverse lg:flex-row items-center gap-8">
-          <div className="lg:w-1/2">
+        <div id="EastSide_Games" className="flex flex-col-reverse lg:flex-row-reverse items-start gap-8">
+          {/* Images First on Desktop, Second on Mobile */}
+          <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Image
+              src="/internshipPhotos/East-Side-Games-Logo.jpg"
+              alt="East Side Games Logo"
+              width={600}
+              height={400}
+              className="rounded-xl shadow-md object-cover w-full h-auto"
+            />
+            <Image
+              src="/internshipPhotos/esg-office.jpg"
+              alt="East Side Games Office"
+              width={600}
+              height={400}
+              className="rounded-xl shadow-md object-cover w-full h-auto"
+            />
+          </div>
+
+          {/* Text */}
+          <div className="w-full lg:w-1/2">
             <h3 className="text-2xl font-semibold mb-2">Software Engineer Intern</h3>
             <p className="text-sm text-gray-600 mb-1">EastSide Games · Sep 2020 – Apr 2021 · Vancouver, BC</p>
-            
+
             <div className="flex flex-wrap gap-2 my-3">
               {[
                 "C#", "Unity", "GitHub", "Game AI", "Multiplayer Integration", "Linux", "JIRA", "Confluence",
@@ -113,7 +130,7 @@ export default function Experience() {
                 </span>
               ))}
             </div>
-            
+
             <p className="text-base leading-relaxed">
               At East Side Games, I built a subscription system and live-service tools for the TPB mobile game using Unity and C#.
               I implemented in-app purchases for both Android and iOS and helped design a debugging menu to resolve service issues.
@@ -126,22 +143,6 @@ export default function Experience() {
               The internship helped shape my product-thinking mindset — balancing user experience with scalability and maintainability.
               It laid the groundwork for how I approach game development and teamwork today.
             </p>
-          </div>
-          <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Image
-              src="/internshipPhotos/East-Side-Games-Logo.jpg"
-              alt="East Side Games Logo"
-              width={600}
-              height={400}
-              className="rounded-xl shadow-md object-cover w-full h-auto"
-            />
-            <Image
-              src="/internshipPhotos/esg-office.jpg"
-              alt="East Side Games Office"
-              width={600}
-              height={400}
-              className="rounded-xl shadow-md object-cover w-full h-auto"
-            />
           </div>
         </div>
       </div>

@@ -15,7 +15,6 @@ export default function Skills({ projects }: SkillsProps) {
   const [isAnimating, setIsAnimating] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-
   const dynamicAnchors: Record<string, { href: string; label: string; type: string }> = {};
   const skillToAnchorsMap: Record<string, { href: string; label: string; type: string }[]> = {};
 
@@ -179,7 +178,6 @@ export default function Skills({ projects }: SkillsProps) {
     .flatMap((section) => section.items)
     .find((skill) => skill.name === visibleSkill);
 
-
   useEffect(() => {
     const el = document.getElementById("__SKILL_TOGGLE__");
     const listener = (e: Event) => {
@@ -220,12 +218,21 @@ export default function Skills({ projects }: SkillsProps) {
         {categorizedSkills.map((section) => (
           <div key={section.category} className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">{section.category}</h3>
-            <div className="flex flex-wrap gap-4 justify-start">
+            <div
+              className="
+                grid grid-cols-[repeat(auto-fill,minmax(5.5rem,1fr))] gap-4 justify-start
+                sm:flex sm:flex-wrap sm:gap-4 sm:justify-start
+              "
+            >
               {section.items.map((skill) => (
                 <div
                   key={skill.name}
                   id={`skill-${skill.name.replace(/\s/g, '')}`}
-                  className="relative group cursor-pointer"
+                  className="
+                    relative group cursor-pointer
+                    flex flex-col items-center justify-start
+                    min-h-[6.5rem] sm:min-h-0
+                  "
                   onClick={() => toggleSkill(skill.name)}
                 >
                   <div
@@ -237,7 +244,18 @@ export default function Skills({ projects }: SkillsProps) {
                   >
                     <span className="text-3xl">{skill.icon}</span>
                   </div>
-                  <div className="absolute left-1/2 -translate-x-1/2 mt-2 text-sm bg-gray-700 text-white rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+                  {/* Desktop tooltip */}
+                  <div
+                    className="hidden sm:block absolute top-full left-1/2 -translate-x-1/2 mt-2
+                    text-sm bg-gray-700 text-white rounded px-2 py-1
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                    pointer-events-none z-20 select-none whitespace-nowrap"
+                  >
+                    {skill.name}
+                  </div>
+
+                  {/* Mobile Tooltip: Always visible */}
+                  <div className="block sm:hidden mt-2 text-sm text-gray-700 font-medium text-center truncate w-full max-w-[5.5rem]">
                     {skill.name}
                   </div>
                 </div>
@@ -250,7 +268,8 @@ export default function Skills({ projects }: SkillsProps) {
           ref={dropdownRef}
           className={`transition-all duration-500 ease-in-out overflow-hidden
             ${expandedSkill ? "max-h-[1000px] opacity-100 translate-y-0 mt-6"
-              : "max-h-0 opacity-0 -translate-y-4 mt-0"}
+              : "max-h-0 opacity-0 -translate-y-4 mt-0"
+            }
           `}
         >
           {activeSkillData && (
