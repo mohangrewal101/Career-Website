@@ -71,7 +71,6 @@ Career-Website/
 ---
 
 #💡 Future Improvements
-Support for mobile mode.
 
 Support for dark mode.
 
