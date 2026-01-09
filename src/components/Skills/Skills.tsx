@@ -101,7 +101,7 @@ export default function Skills({ projects }: SkillsProps) {
       category: "Languages",
       items: [
         "Java", "JavaScript", "TypeScript", "Kotlin", "Swift",
-        "Python", "C#", "C", "C++", "Blueprint"
+        "Python", "C#", "C", "C++", "HTML5", "Blueprint"
       ].map((skillName) => ({
         name: skillName,
         icon: skillIcons[skillName],
@@ -111,7 +111,7 @@ export default function Skills({ projects }: SkillsProps) {
     {
       category: "Frameworks & Libraries",
       items: [
-        "FastAPI", "React", "Tailwind CSS", "Next.js", "Framer Motion",
+        "FastAPI", "React", "Tailwind CSS", "Next.js", "Node.js", "Framer Motion",
         "Hugging Face", "ANTLR", "Z3", "Aubio", "Photon"
       ].map((skillName) => ({
         name: skillName,
@@ -123,7 +123,7 @@ export default function Skills({ projects }: SkillsProps) {
       category: "Tools & Platforms",
       items: [
         "GitHub", "GitLab", "Android Studio", "Xcode", "IntelliJ",
-        "Unity", "Unreal Engine", "JIRA", "Confluence", "Render", "Vercel"
+        "Unity", "Unreal Engine", "Electron", "JIRA", "Confluence", "Render", "Vercel"
       ].map((skillName) => ({
         name: skillName,
         icon: skillIcons[skillName],
@@ -133,7 +133,7 @@ export default function Skills({ projects }: SkillsProps) {
     {
       category: "Technologies / APIs",
       items: [
-        "REST APIs", "Signal Processing", "GPT-2"
+        "Spotify API", "REST APIs", "Signal Processing", "IPC", "GPT-2"
       ].map((skillName) => ({
         name: skillName,
         icon: skillIcons[skillName],

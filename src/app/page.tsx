@@ -33,26 +33,27 @@ const hardcodedProjects = [
     developmentDetails: "Used FastAPI for backend logic and React with Tailwind for UI. Implemented kNN and logistic regression models for generating content. Deployed using Render and Vercel.",
     oneLiner: "Your AI fitness coach in a click 💪"
   }),
-  new Project({
-    name: "Guitar Guide App",
-    type: "personal",
-    startDate: new Date("2024-10-01"),
-    endDate: new Date(), // Present
-    description: "Android app to help users play songs with real-time chord recognition, tuner feedback, and practice breakdowns using signal processing.",
-    detailedDescription: `Creating an Android application focused on real-time guitar chord detection using signal processing techniques with the Aubio library integrated through JNI. Developing core chord recognition logic in Kotlin and Java, with Python scripts for prototyping audio feature extraction and AI model integration to map audio to playable notes. Future implementation will include a circular tuner interface that provides instant visual feedback for tuning accuracy.`,
-    technologies: ["Java", "C", "C++", "Kotlin", "Python", "Android Studio", "Aubio", "GitHub", "Transformer Models", "NLP", "Signal Processing", "Local Model Hosting"],
-    github: "https://github.com/mohangrewal101/GuitarGuide",
-    demo: "",
-    date: "October 2024 – Present",
-    imageFolder: "/Guitar_Guide",
-    features: [
-      "Real-time tuner with visual feedback",
-      "Chord detection from audio input",
-      "Songs broken down into chords"
-    ],
-    developmentDetails: "Implementing signal processing using Aubio, integrating it with Android Studio via JNI. Developing chord recognition in Kotlin and using Python for prototyping signal features.",
-    oneLiner: "Play any song on guitar with this chord recognition app! 🎸"
-  }),
+  // TODO: Add back in later when guitar guide is complete and working.
+  // new Project({
+  //   name: "Guitar Guide App",
+  //   type: "personal",
+  //   startDate: new Date("2024-10-01"),
+  //   endDate: new Date(), // Present
+  //   description: "Android app to help users play songs with real-time chord recognition, tuner feedback, and practice breakdowns using signal processing.",
+  //   detailedDescription: `Creating an Android application focused on real-time guitar chord detection using signal processing techniques with the Aubio library integrated through JNI. Developing core chord recognition logic in Kotlin and Java, with Python scripts for prototyping audio feature extraction and AI model integration to map audio to playable notes. Future implementation will include a circular tuner interface that provides instant visual feedback for tuning accuracy.`,
+  //   technologies: ["Java", "C", "C++", "Kotlin", "Python", "Android Studio", "Aubio", "GitHub", "Transformer Models", "NLP", "Signal Processing", "Local Model Hosting"],
+  //   github: "https://github.com/mohangrewal101/GuitarGuide",
+  //   demo: "",
+  //   date: "October 2024 – Present",
+  //   imageFolder: "/Guitar_Guide",
+  //   features: [
+  //     "Real-time tuner with visual feedback",
+  //     "Chord detection from audio input",
+  //     "Songs broken down into chords"
+  //   ],
+  //   developmentDetails: "Implementing signal processing using Aubio, integrating it with Android Studio via JNI. Developing chord recognition in Kotlin and using Python for prototyping signal features.",
+  //   oneLiner: "Play any song on guitar with this chord recognition app! 🎸"
+  // }),
   new Project({
     name: "Path-Reachability",
     type: "academic",
