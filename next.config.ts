@@ -4,6 +4,8 @@ import type { Configuration } from "webpack";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
+  turbopack: {},
+  
   webpack(config: Configuration) {
     config.module?.rules?.push({
       test: /\.svg$/,

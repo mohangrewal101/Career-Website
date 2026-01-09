@@ -12,6 +12,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const bodyClass = `${geistSans.variable} ${geistMono.variable} antialiased`;
+
 export const metadata: Metadata = {
   title: "Mohan Grewal – Portfolio",
   description: "Personal portfolio of Mohan Grewal showcasing projects, skills, and experience.",
@@ -36,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={bodyClass}
       >
         {children}
       </body>
