@@ -1,7 +1,7 @@
 // This API route fetches dynamic projects from GitHub
 
 import type { NextApiRequest, NextApiResponse } from "next";
-import { fetchPortfolioRepos, fetchPortfolioMetadata } from "../../lib/github";
+import { fetchPortfolioRepos, fetchPortfolioMetadata } from "../../../lib/github";
 
 export default async function handler(
     req: NextApiRequest,
