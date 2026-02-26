@@ -116,7 +116,7 @@ const hardcodedProjects = [
     oneLiner: "Among Us meets Titanic in this 3D multiplayer party game! 🚢"
   }),
   new Project({
-    name: "AI Demo Test",
+    name: "AI Combat Prototype",
     type: "personal",
     startDate: new Date("2021-07-01"),
     endDate: new Date("2022-09-30"),
